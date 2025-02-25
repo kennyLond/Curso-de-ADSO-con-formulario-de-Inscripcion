@@ -1,0 +1,413 @@
+/* Se eliminan márgenes y rellenos predeterminados de todos los elementos, 
+   se establece un box-sizing y se define una fuente predeterminada */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: fonts_sena;
+    justify-content: space-between;
+    max-width: 100%;
+}
+
+/* Configuración del tamaño del encabezado */
+header {
+    height: 50px;
+    display: flex;
+}
+/* Los elementos con clase .box_img tendrán una orientación en columna */
+.box_img {
+    flex-direction: column;
+    height: 50px;
+    width: 55px;
+    margin-left: 10px;
+}
+
+/* Estilo para las imágenes del encabezado */
+.img_header {
+    display: block;
+    height: 40px;
+    width: 40px;
+    margin-left: 2vw;
+    margin: 2px;
+}
+
+/* Ajuste del margen derecho para el contenedor de búsqueda */
+.div_search {
+    width: 60%;
+    height: 50px;
+    display: flex;
+    margin-left: 10px;
+}
+
+/* Estilo de la etiquetas*/
+label {
+    font-size: clamp(10px, 1.7vw , 15px);
+    display: block;
+    margin: 15px;
+}
+
+/* Configuración de los campos de entrada */
+input {
+    width: 50%;
+    height: 30px;
+    border-radius: 10px;
+    outline: none; /* Sin borde al enfocar */
+    margin-top: 10px;
+    margin-right: 22vw;
+    
+}
+/* Cambios al enfocar un campo de entrada */
+input:focus {
+    outline: none;
+    padding-left: 10px;
+}
+/* Ajustes para el contenedor de navegación */
+nav {
+    width: 45%;
+    text-align: center;
+}
+/* Personalización de los enlaces de navegación */
+.menu {
+    text-decoration: none; /* Se elimina el subrayado */
+    text-align: center; 
+    font-size: clamp(10px, 1.1vw, 15px); /* Tamaño de fuente adaptable */
+    padding: 1vw;
+    display: inline-block;
+    color: black;
+    position: relative; /* Necesario para posicionar el pseudo-elemento */
+}
+
+.menu::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0); /* Comienza invisible */
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: green; /* Color de la línea */
+    transition: transform 0.25s ease-out; /* Transición suave */
+    transform-origin: left; /* Inicia la expansión desde la izquierda */
+}
+/* Efecto de hover para enlaces, cambia colores al pasar el cursor */
+.menu:hover::after {
+    transform: scaleX(1); /* La línea se expande al pasar el cursor */
+    transform-origin: left; /* Mantiene la expansión desde la izquierda */
+}
+/*ya aqui empezamos con el centro_________________________________________________________________________________________
+_________________________________________________________________________________________________________________________
+__________________________________________________________________________________________________________________________*/
+
+/* Contenedor para información general */
+.info {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    background-color: #f3f4f4;
+}
+/* Márgenes específicos para columnas */
+.colum_1 {
+    width: 60%;
+    height: auto;
+    margin-left: 10vw;
+} 
+.colum_2 {
+    width: 40%;
+    height: auto;
+    margin-right: 10vw;
+}
+/* Estilo de títulos principales */
+h1 {
+    width: 41vw;
+    padding: 0px;
+    height: 60px;
+    color: black;
+    font-size: clamp(20px, 2.5vw, 40px);
+    margin: 4vw auto 2vw auto;
+    border-bottom: 5px solid #39A900;
+}
+/* Diseño para subtítulos */
+h3 {
+    text-align: left;
+    width: 37vw;
+    height: 4vw;
+    padding: 0.5vw;
+    color: black;
+    display: inline-block;
+    border-radius: 10PX;
+    margin: 0.5vw 1vw;
+    font-size: clamp(2px, 1.1vw , 20px);
+    background-color: #fff;
+}
+h2{
+    color: #fff;
+    font-size: clamp(15px, 2vw, 40px);
+}
+/* Tarjetas con bordes redondeados y fondo blanco */
+.cards {
+    border: 3px solid #39A900;
+    width: 40vw;
+    height: 33vw;
+    border-radius: 10px;
+    padding-bottom: 10px;
+    margin: 20px auto;
+    background-color: #39A900;
+
+}
+
+/* Enlaces dentro del contenedor .container_info tendrán un color azul oscuro */
+.container_info a {
+    color: #00324c;
+}
+
+/* Configuración de párrafos en columnas */
+.colum_1 p {
+    margin:auto;
+    margin-bottom: 3vw;
+    width: 40vw;
+    font-size: clamp(2px, 1.1vw , 20px);
+}
+
+/* Estilo para títulos secundarios en columnas */
+.colum_1 h2 {
+    margin: 2vw;
+    font-size: clamp(20px, 2.5vw, 40px);
+}
+
+/* Configuración para íconos */
+.icons {
+    width: 2vw;
+    margin:5px 20px;
+    float: left;
+}
+/* Márgenes para logotipo */
+.logo {
+    margin-top: 10px;
+    background-color: #f3f4f4;
+    margin: 0px;
+}
+.logo img {
+    margin-top: 1vw;
+    margin-left: 1vw;
+    width: 2vw;
+    height: 2vw;
+    padding: 1px;
+}
+/* Botones con estilo destacado y bordes redondeados */
+.ins {
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    margin: auto;
+    color: white;
+    background-color: #39a900;
+    padding: 1vw;
+    border-radius: 1vw;
+    width: 20vw;
+    margin: auto;
+    margin-top: 4vw;
+    margin-bottom: 2vw;
+}
+
+/* Cambio de fondo al pasar el cursor sobre el botón */
+.ins:hover {
+    background-color: #5FCC00;
+}
+
+/* Configuración de cajas de cursos */
+.curso {
+    width: 24vw;
+    height: 47vw;
+    margin: auto;
+    border-radius: 20px;
+    background-color: #00324D
+}
+h4 {
+    border-bottom: 1px solid #fff;
+    width: 22vw;
+    margin-left: 1vw;
+    margin-top: 2vw;
+    color: #fff;
+}
+h5{
+    display: block;
+    text-align: left;
+    width: 21vw;
+    height: 5vw;
+    color: black;
+    border-radius: 10PX;
+    margin: 0.5vw 1.6vw;
+    font-size: clamp(2px, 1.1vw , 20px);
+    background-color: #fff;
+
+}
+/* Botón con fondo verde y texto blanco */
+.temario {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    margin: auto;
+    color: white;
+    background-color: #00324D;
+    padding: 1vw;
+    border-radius: 1vw;
+    width: 23vw;
+    margin: 6vw auto 0vw auto;
+}
+.temario:hover{
+    background-color: #004766;
+}
+
+/* Estilo para videos, ajustados al ancho del contenedor */
+#video {
+    display: block;
+    width: 100%;
+    height: 25vw; 
+    border-radius: 15px 15px 0 0;  
+}
+
+/* Contenedor de instrucciones con diseño en línea */
+.instruc {
+    background-color: #00324c;
+    display: inline-block;
+}
+
+/* Imágenes de instructores con bordes redondeados */
+.img_inst {
+    width: 3vw;
+    height: 4vw;
+    border-radius: 10VW;
+    margin: auto 1vw auto 2vw;
+}
+
+
+/* Párrafos con justificación y ancho limitado */
+p {
+    margin: auto;
+    width: 32vw;
+    text-align: justify;
+    font-size: clamp(7px, 1vw , 20px);
+    margin-right: 3vw;
+}
+.caja{
+    background-image: url(../img/circuito.jpg);
+    height: 100px;
+}
+
+/* Pie de página con diseño de filas y fondo verde */
+footer {
+    display: flex;
+    flex-direction: row;
+    background-color: #39A900;
+    height: 5vw;
+    font-size: 1vw;
+}
+
+/* Ajustes para las secciones izquierda y derecha del pie de página */
+.footer_letf {
+    width: 50%;
+    margin: auto 3vw;
+}
+.footer_rigth {
+    width: 50%;
+    margin: auto 3vw;
+}
+
+
+@media (max-width: 850px) {
+    h1 {
+        text-align: center;
+        width: 60vw;
+        height: 60px;
+        color: black;
+        font-size: clamp(20px, 2.5vw, 40px);
+        margin: 4vw auto;
+    }
+    .colum_1 p{
+        font-size: 12px;
+        width: 80%;
+        margin: auto;
+
+    }
+    .info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 90%;
+    }
+    .colum_1, .colum_2 {
+        width: 100%;
+        margin: 0px;
+        height: 50%;
+    }
+    .cards, .curso {
+        width: 60%;
+        height: 57%;
+        margin: 1rem auto;
+    }
+    h3 {
+        display: inline-block;
+        text-align: left;
+        width: 90%;
+        height: 6vw;
+        color: black;
+        border-radius: 10PX;
+        margin: 0.5vw 2vw;
+        font-size: clamp(5px, 1.7vw , 20px);
+        border: 1px solid green;
+    }
+    .ins {
+        display: block;
+        margin: auto;
+        color: white;
+        background-color: #39A900;
+        border-radius: 1vw;
+        width: 10%;
+        margin: auto;
+        margin-top: 4vw;
+        margin-bottom: 2vw;
+        padding: 0px;
+    }
+    h4{
+        width: 60%;
+    }
+    .temario, .ins {
+        width: 80%;
+    }
+    .img_inst{
+        width: 5vw;
+        height: 7vw;
+    }
+    .solucion{
+        background-color: #277500;
+        display: block;
+    }
+    p {
+        margin: auto;
+        width: 32vw;
+        height: 100%;
+        text-align: justify;
+        font-size: clamp(8px, 1vw , 20px);
+        margin-right: 3vw;
+    }
+    .instructores{
+        background-color: #00324c;
+    }
+    h5{
+        display: inline-block;
+        text-align: left;
+        width: 26vw;
+        height: 8vw;
+        padding: 0.5vw;
+        color: black;
+        border-radius: 10PX;
+        margin: 2vw 13vw;
+        font-size: clamp(10px, 1.5vw , 20px);
+        border: 1px solid green;
+    }
+    
+    footer{
+        height: 8vw;
+    }
+}
